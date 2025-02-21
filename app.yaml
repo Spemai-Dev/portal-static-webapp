@@ -1,0 +1,10 @@
+runtime: python39
+service: merchant-portal-fe
+handlers:
+- url: /(.*\.(css|js|png|jpg|gif|ico|svg|eot|ttf|woff|woff2))
+  static_files: \1
+  upload: (.*\.(css|js|png|jpg|gif|ico|svg|eot|ttf|woff|woff2))
+
+- url: /.*
+  static_files: index.html
+  upload: index.html
